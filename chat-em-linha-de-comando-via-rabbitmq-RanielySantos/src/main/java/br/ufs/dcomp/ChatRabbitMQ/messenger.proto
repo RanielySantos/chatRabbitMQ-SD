@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package ChatRabbitMQ;
+
+option java_package = "br.ufs.dcomp.ChatRabbitMQ";
+option java_outer_classname = "MsgProto";
+
+message Mensagem{
+    string emissor = 1; // Nome do emissor
+    string date = 2; // Data de envio
+    string hora = 3; // Hora de envio
+    string grupo = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+    string tipo = 5; // Tipo de conteúdo no padrão de tipos MIME
+    string nome = 6; // Nome do conteúdo
+    bytes corpo = 7; // Sequencia de bytes que compõe o corpo da msg
+}
